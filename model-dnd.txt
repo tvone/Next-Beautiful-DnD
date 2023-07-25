@@ -1,0 +1,33 @@
+user : {
+...
+}
+
+board : {
+  _id {},
+  user_id : {
+        type : mongoose.Types.ObjectId,
+	ref : user
+  },
+  name : {},  
+}
+
+column : {
+  _id : {},
+  board_id : {
+    type : mongoose.Types.ObjectId,
+    ref : board
+ },
+ name : {},
+ index : {}
+}
+
+card : {
+   _id : {},
+  column_id : {
+    type : mongoose.Types.ObjectId,
+    ref : column
+ },
+  name : {},
+  content : {},
+  likes : {}
+}
